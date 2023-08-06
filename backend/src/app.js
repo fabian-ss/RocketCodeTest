@@ -1,13 +1,15 @@
 import express from 'express'
 import morgan from 'morgan'
+import formRoutes from './routes/form.routes.js'
 
 const app = express();
 
+// Middlewares
 app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-app.get('/', (req,res) => res.json({message:'The first route from my project'}))
+app.use(formRoutes)
 
 app.use((err, req, res, next) => {
     res.status(500).json({
