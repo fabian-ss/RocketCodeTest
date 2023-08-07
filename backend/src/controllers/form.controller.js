@@ -28,7 +28,7 @@ export const createTable = async (req, res, next) => {
 
         try {
             // query and connection
-            const created = await pool.query('CREATE TABLE if not exists users_test_josefabiansolteroescobar(id SERIAL NOT NULL PRIMARY KEY,nombre VARCHAR(25),segundoNombre VARCHAR(25),apellidoPaterno VARCHAR(25),apellidoMaterno VARCHAR(25),fechaNacimiento DATETIME, email VARCHAR(50) NOT NULL, telefono VARCHAR(10));')
+            const created = await pool.query('CREATE TABLE if not exists users_test_josefabiansolteroescobar(id SERIAL NOT NULL PRIMARY KEY,nombre VARCHAR(25),segundoNombre VARCHAR(25),apellidoPaterno VARCHAR(25),apellidoMaterno VARCHAR(25),fechaNacimiento DATETIME, email VARCHAR(100) NOT NULL, telefono VARCHAR(10));')
             return res.send(created)
 
         } catch (error) {
