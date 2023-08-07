@@ -1,10 +1,9 @@
-import {Router} from 'express'
-import { createForm, queryTest } from '../controllers/form.controller.js'
+import Router from 'express-promise-router'
+import { createForm, createTable } from '../controllers/form.controller.js'
 
 const router = Router();
 
-router.get('/api/v1/form',createForm);
-router.get('/api/v1/querytest',queryTest);
-
+router.post('/api/v1/form',createForm);
+router.post('/api/v1/createtable',createTable)
 
 export default router

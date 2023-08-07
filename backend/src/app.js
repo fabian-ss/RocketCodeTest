@@ -1,6 +1,10 @@
 import express from 'express'
 import morgan from 'morgan'
 import formRoutes from './routes/form.routes.js'
+import { badrequest, notFound } from './middlewares/handle_error.js';
+
+// Dot env
+import './config.js'
 
 const app = express();
 
@@ -9,13 +13,11 @@ app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
+// Routes
 app.use(formRoutes)
 
-app.use((err, req, res, next) => {
-    res.status(500).json({
-        status:"error",
-        message: err.message
-    })
-})
+// Error handler
+app.use(badrequest)
+app.use(notFound)
 
 export default app
