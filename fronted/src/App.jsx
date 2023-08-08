@@ -1,19 +1,16 @@
 import React from 'react'
-import {ContactoForm} from './components/ContactoForm'
-import {NombreForm} from './components/NombreForm'
-import {FechaNacimientoForm} from './components/FechaNacimientoForm'
+import {Routes, Route} from 'react-router-dom'
+import ChatForm from './pages/ChatForm'
+
 function App() {
 
+
   return (
-    <div>
-      <NombreForm />
-      <FechaNacimientoForm />
-      <ContactoForm />
-    </div>
+
+    <Routes>
+      <Route path="/" element={<ChatForm/>}/>
+    </Routes>
   )
 }
 
 export default App
-
-// /^[A-Za-z]+$/
-// /^[a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/

@@ -1,4 +1,9 @@
-body{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body{
   background: #101010;
   color: white;
   display: flex;
@@ -23,4 +28,4 @@ span{
 
 button{
   display: none;
-}
+} */

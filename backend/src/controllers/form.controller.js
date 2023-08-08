@@ -3,6 +3,8 @@ import { TABLE_CREATE_PHRASE } from '../config.js'
 
 export const createForm = async (req, res, next) => {
 
+    console.log("res",req);
+
     const {
         nombre,
         segundoNombre,
