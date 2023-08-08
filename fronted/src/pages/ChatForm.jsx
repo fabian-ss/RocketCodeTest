@@ -35,7 +35,6 @@ function ChatForm() {
     }
 
     registerForm().then(() => {
-      window.location.reload(false)
       alert("Registro creado con exito")      
     }).catch(()=>{
       alert("No se pudo crear el registro")
@@ -44,9 +43,7 @@ function ChatForm() {
 
   const registerForm = async () => {
     const res = await axios.post(import.meta.env.VITE_URLFORM, data.backend)
-
     return res
-
   }
 
   return (
