@@ -12,12 +12,12 @@ export const ContactoForm = ({ ...props }) => {
 
   const onSubmit = handleSubmit((data) => {
 
-    if (props.estado.formContato === false &&  data.telefono !== '') {
+    if (props.estado.formContato === false && data.telefono !== '') {
       props.data.backend.email = data.correo
       props.data.backend.telefono = data.telefono
       props.estado.formContato = true
       props.setEstado({ ...props.estado })
-      props.setData({...props.data})
+      props.setData({ ...props.data })
     }
   })
 

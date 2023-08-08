@@ -3,7 +3,7 @@ import { TABLE_CREATE_PHRASE } from '../config.js'
 
 export const createForm = async (req, res, next) => {
 
-    console.log("res",req);
+    console.log("res", req);
 
     const {
         nombre,
@@ -23,7 +23,7 @@ export const createForm = async (req, res, next) => {
 }
 
 export const createTable = async (req, res, next) => {
-    
+
     //"my_key" it´s a key just for creating the table using the API
     const { my_key } = req.body
     if (my_key === TABLE_CREATE_PHRASE) {

@@ -18,14 +18,14 @@ function ChatForm() {
 
   const [data, setData] = useState({
     active: false,
-    backend:{
-      nombre:"",
-      segundoNombre:"",
-      apellidoMaterno:"",
-      apellidoPaterno:"",
-      fechaNacimiento:"",
-      email:"",
-      telefono:""
+    backend: {
+      nombre: "",
+      segundoNombre: "",
+      apellidoMaterno: "",
+      apellidoPaterno: "",
+      fechaNacimiento: "",
+      email: "",
+      telefono: ""
     },
   })
   const seeAllData = () => {
@@ -35,8 +35,8 @@ function ChatForm() {
     }
 
     registerForm().then(() => {
-      alert("Registro creado con exito")      
-    }).catch(()=>{
+      alert("Registro creado con exito")
+    }).catch(() => {
       alert("No se pudo crear el registro")
     })
   }
@@ -97,7 +97,7 @@ function ChatForm() {
             data.backend.segundoNombre + " " +
             data.backend.apellidoPaterno + " " +
             data.backend.apellidoMaterno
-                      }</h1>
+          }</h1>
         </> : null
       }
 
@@ -157,10 +157,10 @@ function ChatForm() {
         <div className='flex white w-11/12 flex-col justify-between max-w-[20rem] pt-3'>
 
           <h1 className='ml-10 px-2 pt-2 bg-[#F174DC] text-sm'>{"Correo electrónico: " +
-          data.backend.email
+            data.backend.email
           }</h1>
           <h1 className='ml-10 px-2 pb-2 bg-[#F174DC] text-sm'>{"Teléfono: " +
-          data.backend.telefono
+            data.backend.telefono
           }</h1>
 
           <h1 className='ml-16 mt-4 my-2 p-2 bg-slate-200 text-sm'>Si tus datos son correctos por favor continuamos.</h1>
@@ -183,23 +183,23 @@ function ChatForm() {
           <h1
             className=' text-sm'>{
               "Correo electrónico: " +
-              data.backend.email              
+              data.backend.email
             }
           </h1>
           <h1
             className='text-sm'>{
               "Teléfono celular: " +
-              data.backend.telefono              
+              data.backend.telefono
             }
           </h1>
           <h1
             className='text-sm'>{
               "Nombre: " +
-              data.backend.nombre  + " " +
+              data.backend.nombre + " " +
               data.backend.segundoNombre + " " +
-              data.backend.apellidoPaterno + " " + 
-               data.backend.apellidoMaterno
-              
+              data.backend.apellidoPaterno + " " +
+              data.backend.apellidoMaterno
+
             }
           </h1>
         </div>

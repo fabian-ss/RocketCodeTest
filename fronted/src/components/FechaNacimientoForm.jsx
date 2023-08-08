@@ -15,8 +15,8 @@ export const FechaNacimientoForm = ({ ...props }) => {
       props.estado.formBirth = true
       props.data.backend.fechaNacimiento = data.fechaNacimiento
       props.setEstado({ ...props.estado })
-      props.setData({...props.data})
-      
+      props.setData({ ...props.data })
+
       // localStorage.setItem("fechaNacimiento", data.fechaNacimiento)
     }
   })
